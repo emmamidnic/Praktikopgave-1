@@ -6,7 +6,18 @@ namespace Praktikopgave_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
+            
+            Console.WriteLine("Indtast din hvilepuls (slag pr. min.): ");
+            double hvilepuls = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("\n\nIndtast din maximale puls (slag pr. min.): ");
+            double maxPuls = Convert.ToDouble(Console.ReadLine());
         }
+    }
+
+    class Kondital
+    {
+
     }
 }
