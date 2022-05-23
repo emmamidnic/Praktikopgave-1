@@ -86,22 +86,10 @@ namespace Praktikopgave_1
     class Kondital
     {
 
-        private double maxpuls;
-        private double hvilepuls;
-        private double vaegt;
-
-
-        public Kondital(double _maxpuls, double _hvilepuls, double _vaegt)
-        {
-            maxpuls = _maxpuls;
-            hvilepuls = _hvilepuls;
-            vaegt = _vaegt;
-
-        }
-
         public static double BeregnKondital(double maxpuls, double hvilepuls)
         {
             double kondital = Convert.ToDouble((maxpuls / hvilepuls) * 15.3);
+            Math.Round(kondital, 1);
 
             return kondital;
         }
