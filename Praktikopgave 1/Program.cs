@@ -6,17 +6,67 @@ namespace Praktikopgave_1
     {
         static void Main(string[] args)
         {
+            double hvilepuls;
+            double maxpuls;
+            double vaegt;
+
+            
+            while (true)
+            {
+
+                try
+                {
+                    Console.WriteLine("Indtast din hvilepuls (slag pr. min.): ");
+                    hvilepuls = Convert.ToDouble(Console.ReadLine());
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Du har ikke indtastet et gyldigt tal. Prøv igen.\n\n");
+                    continue;
+                }
+
+                break;
+            }
+
+            while (true)
+            {
+
+                try
+                {
+                Console.WriteLine("\n\nIndtast din maximale puls (slag pr. min.): ");
+                maxpuls = Convert.ToDouble(Console.ReadLine());
+                
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Du har ikke indtastet et gyldigt tal. Prøv igen.");
+                        continue;
+                }
+
+                break;
+            }
 
 
-            Console.WriteLine("Indtast din hvilepuls (slag pr. min.): ");
-            double hvilepuls = Convert.ToDouble(Console.ReadLine());
+            while (true)
+            {
 
-            Console.WriteLine("\n\nIndtast din maximale puls (slag pr. min.): ");
-            double maxpuls = Convert.ToDouble(Console.ReadLine());
+                try
+                {
+                Console.WriteLine("\n\nIndtast din vægt i kg: ");
+                vaegt = Convert.ToDouble(Console.ReadLine());
+             
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Du har ikke indtastet et gyldigt tal. Prøv igen.");
+                    continue;
+                }
 
-            Console.WriteLine("\n\nIndtast din vægt i kg: ");
-            double vaegt = Convert.ToDouble(Console.ReadLine());
-            //Kondital test = new Kondital(maxpuls, hvilepuls);
+                break;
+            }
+          
+
+            
 
             double kondital = Kondital.BeregnKondital(maxpuls, hvilepuls);
 
@@ -61,8 +111,6 @@ namespace Praktikopgave_1
 
             double maxIltOptagelse = Math.Round((kondital * vaegt) / 1000, 1);
             return maxIltOptagelse;
-
-            //Maximal iltoptagelse, afrundet til 1 decimal og med benævnelsen l / ml HJÁLP FRÁ ANDY !
 
 
         }
